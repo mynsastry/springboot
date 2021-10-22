@@ -1,12 +1,12 @@
 # Spring REST Hello World Example
 
-Article link : https://www.mkyong.com/spring-boot/spring-rest-hello-world-example/
-
 ## 1. How to start
-```
-$ git clone https://github.com/mkyong/spring-boot.git
-$ cd spring-rest-hello-world
+---
+$ git clone https://github.com/anujnarayan23/springboot.git
+$ mvn clean install
 $ mvn spring-boot:run
-
-$ curl -v localhost:8080/books
-```
+---
+## 2. How to check the output 
+on command prompt $ curl -v localhost:8080/books
+on browser http://localhost:8080/books
+---
