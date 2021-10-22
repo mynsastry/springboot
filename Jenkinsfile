@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-    maven '3.6.3'
+    	   maven '3.6.3'
         }
     stages {
         stage('Build') {
@@ -16,15 +16,6 @@ pipeline {
                 sh 'mvn test'
                 junit 'target/surefire-reports/*.xml'
             }
-        }//end of test
-	    
-          stage('Sonar Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                sh 'mvn sonar:sonar' 
-              }
-            }
-        }//end of sonar
-		
+        }//end of test		
       }//end stages
     }//end pipeline
