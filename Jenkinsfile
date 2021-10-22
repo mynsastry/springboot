@@ -17,13 +17,5 @@ pipeline {
                 junit 'target/surefire-reports/*.xml'
             }
         }//end of test	
-	    
-	stage('Sonar Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                sh 'mvn sonar:sonar' 
-              }
-            }
-        }//end of sonar
       }//end stages
     }//end pipeline
