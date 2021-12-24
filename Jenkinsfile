@@ -23,6 +23,7 @@ pipeline {
 		    withSonarQubeEnv('SonarQube') {
                 sh 'mvn sonar:sonar'
             }
+	    }
         }//end of sonar	
       }//end stages
     }//end pipeline
